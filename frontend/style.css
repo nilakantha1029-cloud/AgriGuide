@@ -1,0 +1,343 @@
+/* ------------------------------------------------------------------------
+   AgriGuide — design tokens
+   Palette and type are grounded in the source material itself: printed
+   agricultural bulletins and soil-survey sheets, not generic agtech green
+   or AI-default cream+terracotta.
+   ------------------------------------------------------------------------ */
+:root {
+  --paper: #f3efe4;
+  --paper-raised: #fbf8f0;
+  --ink: #262019;
+  --ink-soft: #55503f;
+  --rule: #d9d0ba;
+  --moss: #5b6b3c;
+  --moss-dark: #454f2c;
+  --ochre: #b4772a;
+  --rust: #9c4a34;
+  --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --radius: 10px;
+  --max-line: 68ch;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--paper);
+  /* faint survey-sheet grid, referencing soil-survey field sheets */
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1, h2 { font-family: var(--serif); margin: 0; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------------
+   Masthead
+   ------------------------------------------------------------------------ */
+.masthead {
+  border-bottom: 2px solid var(--ink);
+  background: var(--paper-raised);
+}
+.masthead-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px 20px;
+}
+.masthead h1 {
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+}
+.tagline {
+  margin: 6px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  max-width: var(--max-line);
+}
+
+/* ------------------------------------------------------------------------
+   Layout
+   ------------------------------------------------------------------------ */
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* ------------------------------------------------------------------------
+   Rail (topic filter + sample questions)
+   ------------------------------------------------------------------------ */
+.rail {
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.rail-section h2 {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.topic-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--rule);
+}
+.topic-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--rule);
+  padding: 9px 4px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  border-left: 3px solid transparent;
+}
+.topic-item:hover { color: var(--ink); }
+.topic-item[aria-pressed="true"] {
+  color: var(--ink);
+  font-weight: 600;
+  border-left-color: var(--moss);
+  background: rgba(91, 107, 60, 0.08);
+}
+
+.sample-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sample-item button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.35;
+}
+.sample-item button:hover {
+  border-color: var(--moss);
+  color: var(--ink);
+}
+
+.clear-btn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  text-decoration: underline;
+  padding: 0;
+}
+.clear-btn:hover { color: var(--rust); }
+
+/* ------------------------------------------------------------------------
+   Bulletin (conversation column)
+   ------------------------------------------------------------------------ */
+.bulletin {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+}
+
+.entries {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-bottom: 24px;
+}
+
+.empty-state {
+  color: var(--ink-soft);
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  background: var(--paper-raised);
+}
+.empty-state p { margin: 4px 0; max-width: var(--max-line); margin-inline: auto; }
+
+.entry {
+  border-top: 1px solid var(--ink);
+  padding-top: 14px;
+}
+.entry-number {
+  font-family: var(--serif);
+  color: var(--ochre);
+  font-size: 0.85rem;
+  margin: 0 0 6px;
+}
+.entry-question {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin: 0 0 10px;
+  max-width: var(--max-line);
+}
+.entry-answer {
+  max-width: var(--max-line);
+}
+.entry-answer p { margin: 0 0 10px; }
+.entry-answer ul { margin: 0 0 10px; padding-left: 1.2em; }
+.entry-answer li { margin-bottom: 4px; }
+.entry-answer strong { color: var(--moss-dark); }
+
+.citation {
+  display: inline-block;
+  font-size: 0.72em;
+  font-weight: 700;
+  color: var(--ochre);
+  border: 1px solid var(--ochre);
+  border-radius: 4px;
+  padding: 0 4px;
+  margin: 0 2px;
+  transform: translateY(-1px);
+}
+.entry-answer em { color: var(--ink-soft); }
+
+.sources {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.source-card {
+  border: 1px solid var(--rule);
+  background: var(--paper-raised);
+  border-radius: 6px;
+  padding: 5px 9px;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+.source-card b { color: var(--ochre); }
+
+.note {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--rule);
+  padding-left: 10px;
+}
+
+.entry.pending .entry-answer { color: var(--ink-soft); font-style: italic; }
+.pending-dots::after {
+  content: "";
+  animation: dots 1.2s steps(4, end) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pending-dots::after { animation: none; content: "…"; }
+}
+@keyframes dots {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+  100% { content: ""; }
+}
+
+.entry.error {
+  border-top-color: var(--rust);
+}
+.entry.error .entry-answer {
+  color: var(--rust);
+}
+
+/* ------------------------------------------------------------------------
+   Ask bar
+   ------------------------------------------------------------------------ */
+.ask-bar {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  background: var(--paper);
+  padding: 14px 0 4px;
+  border-top: 1px solid var(--rule);
+}
+.ask-bar textarea {
+  flex: 1;
+  resize: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  border: 1px solid var(--ink-soft);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+  color: var(--ink);
+  max-height: 140px;
+}
+.ask-bar button {
+  background: var(--moss);
+  color: var(--paper-raised);
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.ask-bar button:hover:not(:disabled) { background: var(--moss-dark); }
+.ask-bar button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* ------------------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------------------ */
+@media (max-width: 880px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .rail {
+    position: static;
+    flex-direction: column;
+  }
+  .topic-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: none;
+  }
+  .topic-item {
+    width: auto;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 5px 12px;
+  }
+  .topic-item[aria-pressed="true"] {
+    border-color: var(--moss);
+  }
+}

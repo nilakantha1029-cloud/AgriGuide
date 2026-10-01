@@ -1,0 +1,610 @@
+[
+  {
+    "id": "q01",
+    "question": "How much seed per hectare is needed for direct-seeded versus transplanted rice?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "field crops",
+        "pages": [
+          4
+        ]
+      },
+      {
+        "source": "icar",
+        "pages": [
+          169,
+          249
+        ]
+      }
+    ],
+    "keywords": [
+      "direct",
+      "transplant",
+      "kg"
+    ]
+  },
+  {
+    "id": "q02",
+    "question": "What water depth should be maintained in a rice field after transplanting?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "field crops",
+        "pages": [
+          3
+        ]
+      }
+    ],
+    "keywords": [
+      "3\\s*cm"
+    ]
+  },
+  {
+    "id": "q03",
+    "question": "How much nitrogen and phosphorus does a 2 t/ha rice yield on clay loam soil need?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "field crops",
+        "pages": [
+          5
+        ]
+      }
+    ],
+    "keywords": [
+      "20\\s*kg",
+      "5\\s*kg"
+    ]
+  },
+  {
+    "id": "q04",
+    "question": "What moisture level should paddy have when stored?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "field crops",
+        "pages": [
+          5
+        ]
+      }
+    ],
+    "keywords": [
+      "14\\s*%"
+    ]
+  },
+  {
+    "id": "q05",
+    "question": "How do I control cutworms without pesticides?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "natural pest",
+        "pages": [
+          9
+        ]
+      }
+    ],
+    "keywords": [
+      "molasses"
+    ]
+  },
+  {
+    "id": "q06",
+    "question": "How do I make a fruit fly trap and what bait can I use?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "natural pest",
+        "pages": [
+          10
+        ]
+      }
+    ],
+    "keywords": [
+      "bottle",
+      "bait"
+    ]
+  },
+  {
+    "id": "q07",
+    "question": "Which companion plant helps deter carrot fly?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "natural pest",
+        "pages": [
+          6
+        ]
+      }
+    ],
+    "keywords": [
+      "onion"
+    ]
+  },
+  {
+    "id": "q08",
+    "question": "How many years of crop rotation are recommended for vegetables?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "natural pest",
+        "pages": [
+          4
+        ]
+      },
+      {
+        "source": "vegetable",
+        "pages": [
+          17
+        ]
+      }
+    ],
+    "keywords": [
+      "\\b[345]\\s*(to|-|\\u2013|\\u2014)\\s*[345]\\b"
+    ]
+  },
+  {
+    "id": "q09",
+    "question": "How does soil pH affect potato scab?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "natural pest",
+        "pages": [
+          5
+        ]
+      }
+    ],
+    "keywords": [
+      "acid"
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "How do I make a light trap for insects?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "natural pest",
+        "pages": [
+          11
+        ]
+      }
+    ],
+    "keywords": [
+      "lantern"
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "How can I protect nurseries from termites?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "natural pest",
+        "pages": [
+          8
+        ]
+      }
+    ],
+    "keywords": [
+      "trench"
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "What pests is garlic spray effective against?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "natural pest",
+        "pages": [
+          13
+        ]
+      }
+    ],
+    "keywords": [
+      "army\\s*worm"
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "What is the planting distance for mango?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "horticulture",
+        "pages": [
+          49
+        ]
+      },
+      {
+        "source": "icar",
+        "pages": [
+          72
+        ]
+      },
+      {
+        "source": "farmerbook",
+        "pages": [
+          64,
+          66
+        ]
+      }
+    ],
+    "keywords": [
+      "\\b(10|8|5)\\b"
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "What should the planting pit be filled with when establishing a fruit orchard?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "horticulture",
+        "pages": [
+          50
+        ]
+      }
+    ],
+    "keywords": [
+      "FYM|farmyard|farm yard",
+      "phosphate"
+    ]
+  },
+  {
+    "id": "q15",
+    "question": "How long should hardwood stem cuttings be?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "horticulture",
+        "pages": [
+          29
+        ]
+      }
+    ],
+    "keywords": [
+      "15",
+      "25"
+    ]
+  },
+  {
+    "id": "q16",
+    "question": "Which rooting medium is best for air layering?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "horticulture",
+        "pages": [
+          35
+        ]
+      }
+    ],
+    "keywords": [
+      "sphagnum"
+    ]
+  },
+  {
+    "id": "q17",
+    "question": "What is the quincunx system of orchard planting?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "horticulture",
+        "pages": [
+          52
+        ]
+      }
+    ],
+    "keywords": [
+      "centre|center"
+    ]
+  },
+  {
+    "id": "q18",
+    "question": "What relative humidity is maintained in a mist chamber?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "horticulture",
+        "pages": [
+          48
+        ]
+      }
+    ],
+    "keywords": [
+      "95"
+    ]
+  },
+  {
+    "id": "q19",
+    "question": "Which fruit crops have high salt tolerance?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "horticulture",
+        "pages": [
+          17
+        ]
+      }
+    ],
+    "keywords": [
+      "date palm",
+      "\\bber\\b"
+    ]
+  },
+  {
+    "id": "q20",
+    "question": "What is T-budding (shield budding)?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "horticulture",
+        "pages": [
+          40
+        ]
+      }
+    ],
+    "keywords": [
+      "shield|T-shaped|letter T|T-bud"
+    ]
+  },
+  {
+    "id": "q21",
+    "question": "What is cation exchange capacity?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "soil science",
+        "pages": [
+          150,
+          152
+        ]
+      }
+    ],
+    "keywords": [
+      "exchangeable|adsorb|cations"
+    ]
+  },
+  {
+    "id": "q22",
+    "question": "What is soil texture?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "soil science",
+        "pages": [
+          68
+        ]
+      }
+    ],
+    "keywords": [
+      "sand",
+      "silt",
+      "clay"
+    ]
+  },
+  {
+    "id": "q23",
+    "question": "What is bulk density of soil?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "soil science",
+        "pages": [
+          88,
+          89
+        ]
+      }
+    ],
+    "keywords": [
+      "unit volume|weight",
+      "pore"
+    ]
+  },
+  {
+    "id": "q24",
+    "question": "What is the C:N ratio in soil?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "soil science",
+        "pages": [
+          173,
+          174,
+          175
+        ]
+      }
+    ],
+    "keywords": [
+      "\\d+\\s*:\\s*1"
+    ]
+  },
+  {
+    "id": "q25",
+    "question": "What is humus?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "soil science",
+        "pages": [
+          165,
+          166,
+          167,
+          168
+        ]
+      }
+    ],
+    "keywords": [
+      "organic",
+      "decompos"
+    ]
+  },
+  {
+    "id": "q26",
+    "question": "What is available water in soil in terms of field capacity and wilting point?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "soil science",
+        "pages": [
+          107
+        ]
+      }
+    ],
+    "keywords": [
+      "field capacity",
+      "wilting"
+    ]
+  },
+  {
+    "id": "q27",
+    "question": "What is physical weathering of rocks?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "soil science",
+        "pages": [
+          42
+        ]
+      }
+    ],
+    "keywords": [
+      "disintegrat|broken|physical"
+    ]
+  },
+  {
+    "id": "q28",
+    "question": "How is soil colour described using the Munsell system?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "soil science",
+        "pages": [
+          95
+        ]
+      }
+    ],
+    "keywords": [
+      "hue",
+      "chroma"
+    ]
+  },
+  {
+    "id": "q29",
+    "question": "What fertiliser schedule is advised for rice in Kerala?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "icar",
+        "pages": [
+          137
+        ]
+      }
+    ],
+    "keywords": [
+      "split",
+      "panicle|tillering"
+    ]
+  },
+  {
+    "id": "q30",
+    "question": "When is the ideal time to plant grafted mango saplings?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "icar",
+        "pages": [
+          72
+        ]
+      }
+    ],
+    "keywords": [
+      "June"
+    ]
+  },
+  {
+    "id": "q31",
+    "question": "What are examples of organic manures?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "farmerbook",
+        "pages": [
+          58
+        ]
+      }
+    ],
+    "keywords": [
+      "cow dung|farmyard|farm yard|compost"
+    ]
+  },
+  {
+    "id": "q32",
+    "question": "How is soil pH used to decide lime requirement?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "vegetable",
+        "pages": [
+          18,
+          19
+        ]
+      }
+    ],
+    "keywords": [
+      "lime",
+      "acid"
+    ]
+  },
+  {
+    "id": "q33",
+    "question": "Can wheat be used as a cover crop and when can it be seeded?",
+    "answerable": true,
+    "expected": [
+      {
+        "source": "vegetable",
+        "pages": [
+          28
+        ]
+      }
+    ],
+    "keywords": [
+      "September",
+      "November"
+    ]
+  },
+  {
+    "id": "u1",
+    "question": "What fertilizer is recommended for wheat cultivation?",
+    "answerable": false,
+    "kind": "in_domain_missing"
+  },
+  {
+    "id": "u2",
+    "question": "Who won the cricket world cup?",
+    "answerable": false,
+    "kind": "out_of_domain"
+  },
+  {
+    "id": "u3",
+    "question": "What is the price of gold today?",
+    "answerable": false,
+    "kind": "out_of_domain"
+  },
+  {
+    "id": "u4",
+    "question": "How do I train a dog to sit?",
+    "answerable": false,
+    "kind": "out_of_domain"
+  },
+  {
+    "id": "u5",
+    "question": "How do I set up a bitcoin mining rig?",
+    "answerable": false,
+    "kind": "out_of_domain"
+  }
+]

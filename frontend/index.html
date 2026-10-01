@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AgriGuide — Agriculture Advisory</title>
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <h1>AgriGuide</h1>
+    <p class="tagline">Answers drawn from agricultural bulletins, advisories and reference guides</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="rail">
+    <section class="rail-section">
+      <h2>Topic</h2>
+      <div id="categoryList" class="topic-list" role="radiogroup" aria-label="Filter by topic">
+        <!-- populated by app.js -->
+      </div>
+    </section>
+
+    <section class="rail-section">
+      <h2>Try asking</h2>
+      <ul id="sampleList" class="sample-list">
+        <!-- populated by app.js -->
+      </ul>
+    </section>
+
+    <button id="clearBtn" class="clear-btn" type="button">Clear conversation</button>
+  </aside>
+
+  <main class="bulletin">
+    <div id="entries" class="entries">
+      <div class="empty-state" id="emptyState">
+        <p>No entries yet.</p>
+        <p>Ask a question below, or pick one from “Try asking” on the left.</p>
+      </div>
+    </div>
+
+    <form id="askForm" class="ask-bar" autocomplete="off">
+      <textarea
+        id="questionInput"
+        rows="1"
+        maxlength="2000"
+        placeholder="Ask about fertilizer, pests, soil, planting distance…"
+        aria-label="Ask a question"
+      ></textarea>
+      <button type="submit" id="askBtn">Ask</button>
+    </form>
+  </main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

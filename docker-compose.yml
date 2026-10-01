@@ -1,0 +1,16 @@
+services:
+  agriguide:
+    build: .
+    image: agriguide:latest
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    # Uncomment to override the baked-in index without rebuilding the image -
+    # useful while iterating on PDFs. Run `docker compose exec agriguide
+    # python -m src.ingest` afterwards to rebuild the index against the
+    # mounted data.
+    # volumes:
+    #   - ./data:/app/data
+    #   - ./index:/app/index

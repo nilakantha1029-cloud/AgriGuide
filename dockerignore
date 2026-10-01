@@ -1,0 +1,24 @@
+# Never bake secrets into the image - GROQ_API_KEY is injected at runtime via
+# --env-file / docker-compose's env_file instead.
+.env
+
+# Local Python virtual environment (large, irrelevant to the image)
+agvenv/
+.venv/
+__pycache__/
+*.pyc
+
+# The image builds its own index from data/ at build time; a stale local
+# index should never be copied in and mistaken for a fresh one.
+index/
+
+# Evaluation artifacts and scratch files, not needed inside the container
+eval/results.md
+eval/results.json
+answer.txt
+
+# VCS / editor
+.git/
+.gitignore
+.vscode/
+.idea/
